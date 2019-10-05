@@ -75,6 +75,9 @@ def undo ():
 def youdied ():
     alert("you died")
 
+def help ():
+    alert('arrow keys move')
+
 
 
 click = False
@@ -91,7 +94,8 @@ buttons = [
     # ["test", printTest, fullb],
     # ["pause", pause, fullb],
     ["reset", reset, fullb],
-    ["undo", undo, fullb]
+    ["undo", undo, fullb],
+    ['help', help, fullb]
 ]
 buttonobj = []
 buttonMargin = 2
