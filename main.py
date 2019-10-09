@@ -28,14 +28,22 @@ T = Text()
 
 DISPLAYSURF.blit(mainBoard.draw(), (TX, TY))
 def getDirection (k):
-    if k==K_DOWN:
+    if k==K_DOWN or k==K_KP2:
         return DIRECTION['DOWN']
-    elif k==K_UP:
+    elif k==K_UP or k==K_KP8:
         return DIRECTION['UP']
-    elif k==K_RIGHT:
+    elif k==K_RIGHT or k==K_KP6:
         return DIRECTION['RIGHT']
-    elif k==K_LEFT:
+    elif k==K_LEFT or k==K_KP4:
         return DIRECTION['LEFT']
+    elif k==K_KP7:
+        return DIRECTION['UP_LEFT']
+    elif k==K_KP9:
+        return DIRECTION['UP_RIGHT']
+    elif k==K_KP1:
+        return DIRECTION['DOWN_LEFT']
+    elif k==K_KP3:
+        return DIRECTION['DOWN_RIGHT']
     return DIRECTION['UP']
 
 def alert (message):
